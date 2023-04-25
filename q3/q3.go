@@ -13,10 +13,9 @@ package q3
 //Se M ou N forem iguais ou menores que 0, a função deve retornar um erro.
 
 func DominoPieces(m, n int) (int, error) {
-	if m <= 0 || n <= 0 {
-return 0, fmt.Errorf("Tamanho do tabuleio invalido.")
-}
-produto := m * n
-quantidadePeças := produto / 2
-return quantidadePeças, nil
+	if m <= 0 || n <= 0{
+		return 0, errors.New("erro")
+		
+	}
+	return (m*n) / 2, nil
 }
