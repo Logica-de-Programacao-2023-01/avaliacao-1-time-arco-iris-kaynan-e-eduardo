@@ -15,27 +15,36 @@ package q5
 //Ajude Pedro a lidar com esta tarefa fácil.
 
 func ProcessString(s string) string {
-	x := strings.Split(s, "")
-	i := 0
-	newslice := []string{}
-	vogais := "aeiou"
-	for i < len(x) {
-		x[i] = strings.ToLower(x[i])
-		i++
+	if strings.Contains(s, "a") {
+		return strings.ReplaceAll(s, "a", "")
 	}
-	i = 0
-	for _, c := range x {
-		if !strings.ContainsAny(c, vogais) {
-			newslice = append(newslice, c)
-		}
+	if strings.Contains(s, "e") {
+		return strings.ReplaceAll(s, "e", "")
 	}
-	i = 0
-	new_s := ""
-	for i < len(newslice) {
-		new_s += "."
-		new_s += newslice[i]
-
-		i++
+	if strings.Contains(s, "i") {
+		return strings.ReplaceAll(s, "i", "")
 	}
-	return new_s
+	if strings.Contains(s, "o") {
+		return strings.ReplaceAll(s, "o", "")
+	}
+	if strings.Contains(s, "u") {
+		return strings.ReplaceAll(s, "u", "")
+	}
+	if strings.Contains(s, "A") {
+		return strings.ReplaceAll(s, "A", "")
+	}
+	if strings.Contains(s, "E") {
+		return strings.ReplaceAll(s, "E", "")
+	}
+	if strings.Contains(s, "I") {
+		return strings.ReplaceAll(s, "I", "")
+	}
+	if strings.Contains(s, "O") {
+		return strings.ReplaceAll(s, "O", "")
+	}
+	if strings.Contains(s, "U") {
+		return strings.ReplaceAll(s, "U", "")
+	}
+	
+	return ""
 }
