@@ -15,9 +15,6 @@ package q3
 func DominoPieces(m, n int) (int, error) {
 	if m <= 0 || n <= 0 {
 		return 0, errors.New("erro")
-
 	}
-	return (m * n) / 2, nil
+	return (m * n) / 2, nil	
 }
-	
-
