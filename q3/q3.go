@@ -20,4 +20,4 @@ func DominoPieces(m, n int) (int, error) {
 	return (m * n) / 2, nil
 }
 	
-}
+
