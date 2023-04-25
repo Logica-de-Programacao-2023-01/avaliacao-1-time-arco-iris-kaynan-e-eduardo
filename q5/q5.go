@@ -15,27 +15,27 @@ package q5
 //Ajude Pedro a lidar com esta tarefa fácil.
 
 func ProcessString(s string) string {
-	result := ""
-
-	for i := 0; i < len(s); i++ {
-		if strings.Contains("AEIOUaeiou", string(s[i])) {
-
-			s := strings.ReplaceAll(s, "a", "")
-			s = strings.ReplaceAll(s, "e", "")
-			s = strings.ReplaceAll(s, "i", "")
-			s = strings.ReplaceAll(s, "o", "")
-			s = strings.ReplaceAll(s, "u", "")
-			s = strings.ReplaceAll(s, "A", "")
-			s = strings.ReplaceAll(s, "E", "")
-			s = strings.ReplaceAll(s, "I", "")
-			s = strings.ReplaceAll(s, "O", "")
-			s = strings.ReplaceAll(s, "U", "")
-			s = strings.ToLower(s)
-		}
-		if strings.Contains("BCDFGHJKLMNPQRSTVWXYZbcdfghjklmnpqrstvwxyz", string(s[i])) {
-			output := "." + strings.ToLower(string(s[i]))
-			result += output
+	x := strings.Split(s, "")
+	i := 0
+	newslice := []string{}
+	vogais := "aeiou"
+	for i < len(x) {
+		x[i] = strings.ToLower(x[i])
+		i++
+	}
+	i = 0
+	for _, c := range x {
+		if !strings.ContainsAny(c, vogais) {
+			newslice = append(newslice, c)
 		}
 	}
-	return result
+	i = 0
+	new_s := ""
+	for i < len(newslice) {
+		new_s += "."
+		new_s += newslice[i]
+
+		i++
+	}
+	return new_s
 }
