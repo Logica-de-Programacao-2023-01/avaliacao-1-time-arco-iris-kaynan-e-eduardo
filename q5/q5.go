@@ -13,7 +13,10 @@ package q5
 //programa na sequência de caracteres inicial.
 //
 //Ajude Pedro a lidar com esta tarefa fácil.
-
+import (
+	"fmt"
+	"strings"
+)
 func ProcessString(s string) string {
 	x := strings.Split(s, "")
 	i := 0
