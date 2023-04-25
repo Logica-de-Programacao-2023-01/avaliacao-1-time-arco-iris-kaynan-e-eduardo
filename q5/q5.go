@@ -15,36 +15,27 @@ package q5
 //Ajude Pedro a lidar com esta tarefa fácil.
 
 func ProcessString(s string) string {
-	if strings.Contains(s, "a") {
-		return strings.ReplaceAll(s, "a", "")
+	result := ""
+
+	for i := 0; i < len(s); i++ {
+		if strings.Contains("AEIOUaeiou", string(s[i])) {
+
+			s := strings.ReplaceAll(s, "a", "")
+			s = strings.ReplaceAll(s, "e", "")
+			s = strings.ReplaceAll(s, "i", "")
+			s = strings.ReplaceAll(s, "o", "")
+			s = strings.ReplaceAll(s, "u", "")
+			s = strings.ReplaceAll(s, "A", "")
+			s = strings.ReplaceAll(s, "E", "")
+			s = strings.ReplaceAll(s, "I", "")
+			s = strings.ReplaceAll(s, "O", "")
+			s = strings.ReplaceAll(s, "U", "")
+			s = strings.ToLower(s)
+		}
+		if strings.Contains("BCDFGHJKLMNPQRSTVWXYZbcdfghjklmnpqrstvwxyz", string(s[i])) {
+			output := "." + strings.ToLower(string(s[i]))
+			result += output
+		}
 	}
-	if strings.Contains(s, "e") {
-		return strings.ReplaceAll(s, "e", "")
-	}
-	if strings.Contains(s, "i") {
-		return strings.ReplaceAll(s, "i", "")
-	}
-	if strings.Contains(s, "o") {
-		return strings.ReplaceAll(s, "o", "")
-	}
-	if strings.Contains(s, "u") {
-		return strings.ReplaceAll(s, "u", "")
-	}
-	if strings.Contains(s, "A") {
-		return strings.ReplaceAll(s, "A", "")
-	}
-	if strings.Contains(s, "E") {
-		return strings.ReplaceAll(s, "E", "")
-	}
-	if strings.Contains(s, "I") {
-		return strings.ReplaceAll(s, "I", "")
-	}
-	if strings.Contains(s, "O") {
-		return strings.ReplaceAll(s, "O", "")
-	}
-	if strings.Contains(s, "U") {
-		return strings.ReplaceAll(s, "U", "")
-	}
-	
-	return ""
+	return result
 }
