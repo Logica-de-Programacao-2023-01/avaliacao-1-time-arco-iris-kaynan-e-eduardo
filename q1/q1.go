@@ -15,9 +15,12 @@ import "fmt"
 //da melancia for menor ou igual a 0, a função deve retornar um erro.
 
 func DivideWatermelon(weight int) (bool, error) {
-		var expected, expectedErr bool
+	var expected, expectedErr bool
 	if weight <= 0 {
 		return expectedErr, fmt.Errorf("peso inválido")
+	}
+	if weight==2{
+		return false, nil
 	}
 	if weight%2 != 1 {
 		return true, nil
